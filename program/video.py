@@ -10,6 +10,7 @@ from driver.filters import command, other_filters
 from driver.queues import QUEUE, add_to_queue
 from driver.veez import call_py, user
 from pyrogram import Client
+from driver.decorators import authorized_users_only
 from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from pytgcalls import StreamType
@@ -55,6 +56,7 @@ async def ytdl(link):
 
 
 @Client.on_message(command(["izlet", f"izlet@{BOT_USERNAME}"]) & other_filters)
+@authorized_users_only
 async def vplay(c: Client, m: Message):
     await m.delete()
     replied = m.reply_to_message
