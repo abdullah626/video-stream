@@ -10,6 +10,7 @@ from driver.filters import command, other_filters
 from driver.queues import QUEUE, add_to_queue
 from driver.veez import call_py, user
 from driver.utils import bash
+from driver.decorators import authorized_users_only
 from pyrogram import Client
 from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
@@ -40,6 +41,7 @@ async def ytdl(format: str, link: str):
 
 
 @Client.on_message(command(["oynat", f"oynat@{BOT_USERNAME}"]) & other_filters)
+@authorized_users_only
 async def play(c: Client, m: Message):
     await m.delete()
     replied = m.reply_to_message
