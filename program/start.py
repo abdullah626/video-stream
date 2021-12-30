@@ -149,7 +149,7 @@ async def get_uptime(client: Client, message: Message):
 @Client.on_message(filters.command("help") & ~filters.private & ~filters.channel)
 async def ghelp(_, message: Message):
     await message.reply_text(
-        """ Özel bot yapmak için iletişim=> @baykaoss
+        """ Özel bot yapmak için iletişim=> @Mubtezell
 
 » /oynat => istediğin şarkıyı direk dinletir
 » /izlet => istedigin filmi indirip izletir
