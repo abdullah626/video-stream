@@ -29,7 +29,6 @@ async def cbstart(_, query: CallbackQuery):
                 ],
                 [InlineKeyboardButton("❓ Basit komutlar", callback_data="cbhowtouse")],
                 [
-                    InlineKeyboardButton("📚 Komutlar", callback_data="cbcmds"),
                     InlineKeyboardButton(" Sahibi ", url=f"https://t.me/{OWNER_NAME}"),
                 ],
                 [
@@ -59,7 +58,7 @@ async def cbguides(_, query: CallbackQuery):
 💡 **Bu bot hakkında takip eden bir sorunuz varsa, bunu buradaki destek sohbetimde iletebilirsiniz. @Mubtezell**
 ⚡ __Powered by {BOT_NAME} A.I__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("🔙 Geri", callback_data="cbstart")]]
+            [[InlineKeyboardButton("🔙 DEVAMKE", callback_data="cbcmds")]]
         ),
     )
 
@@ -121,7 +120,7 @@ async def cbadmin(_, query: CallbackQuery):
 async def cbsudo(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""🏮
-Üzgünüm bu komutları sadece bot sahibi kullanabilir sen de kendine ait bir bot istiyorsan @Mubtezell 'e yazabilirsin...
+Üzgünüm bu komutları sadece bot sahibi kullanabilir sen de kendine ait bir bot istiyorsan @mubtezell  'e yazabilirsin...
 ⚡ __{BOT_NAME}tarafından güçlendirildi__""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("🔙 Geri", callback_data="cbcmds")]]
