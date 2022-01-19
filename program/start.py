@@ -67,7 +67,6 @@ async def start_(client: Client, message: Message):
                 ],
                 [InlineKeyboardButton("❓ Basit komutlar", callback_data="cbhowtouse")],
                 [
-                    InlineKeyboardButton("📚 Komutlar", callback_data="cbcmds"),
                     InlineKeyboardButton(" Sahibi ", url=f"https://t.me/{OWNER_NAME}"),
                 ],
                 [
