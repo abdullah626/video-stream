@@ -55,7 +55,7 @@ async def cbguides(_, query: CallbackQuery):
 3.) **Grubunuza @{ASSISTANT_NAME} ekleyin veya onu davet etmek için /gel yazın.**
 4.) **Video/müzik oynatmaya başlamadan önce görüntülü sohbeti açın.**
 5.) **Bazen /reload komutunu kullanarak botu yeniden yüklemek bazı sorunları çözmenize yardımcı olabilir.**
-💡 **Bu bot hakkında takip eden bir sorunuz varsa, bunu buradaki destek sohbetimde iletebilirsiniz. @Mubtezell**
+💡 **Bu bot hakkında takip eden bir sorunuz varsa, bunu buradaki destek sohbetimde iletebilirsiniz. @sohbetonlinesahip**
 ⚡ __Powered by {BOT_NAME} A.I__""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("🔙 DEVAMKE", callback_data="cbcmds")]]
